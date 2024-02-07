@@ -1,0 +1,5 @@
+1. Adicionar vector clocks e ID (ID pode ser o qualifier ?) no serverState. Lista de Ints.
+
+propagate state nunca e chamado sozinho, so e chamado quando o admin faz gossip.
+se o servidor estiver desatualizado e o cliente pedir uma leitura, simplesmente da erro.
+se pedir escrita bota como unstable na updatelog.
